@@ -12,10 +12,8 @@ const sketch = () => {
     context.fillStyle = 'white';
     context.fillRect(0, 0, width, height);
     context.stroke();
-    // context.strokeStyle = "white";
+    context.strokeStyle = "white";
     context.lineWidth = width * 0.01;
-
-
 
     //4loop rectangles x 5
     for (let i = 0; i < 5; i++){
