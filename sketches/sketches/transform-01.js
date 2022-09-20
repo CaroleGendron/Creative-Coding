@@ -17,27 +17,27 @@ const sketch = () => {
 
     const cx = width * 0.5;
     const cy = height * 0.5;
-    const w = width * 0.01;
-    const h = height * 0.1;
+    const w = width * 0.005;
+    const h = height * 0.3;
     let x,y;
 
-    const num =12;
-    const radius = width * 0.3;
+    const num =120;
+    const radius = width * 0.10;
 
     for (let i =0; i <num; i++){
 
-      const slice = degToRad(360/num);
+      const slice = degToRad(300/num);
       const angle = slice * i;
 
-      x = cx + radius * Math.sin(angle);
-      y = cy + radius * Math.cos(angle);
+      x = cx + radius * Math.sin(angle* Math.PI);
+      y = cy + radius * Math.cos(angle* Math.PI);
 
       context.save();
       context.translate(x,y);
       context.rotate(-angle);
 
       context.beginPath();
-      context.rect(-w*0.5,- h*0.5, w, h);
+      context.rect(-w*0.9,- h*0.9, w, h);
       context.fill();
       context.restore()
     }
