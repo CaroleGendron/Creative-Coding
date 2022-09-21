@@ -1,0 +1,24 @@
+{
+  "name": "creative-coding",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CaroleGendron/Creative-Coding.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CaroleGendron/Creative-Coding/issues"
+  },
+  "homepage": "https://github.com/CaroleGendron/Creative-Coding#readme",
+  "dependencies": {
+    "canvas-sketch": "^0.7.6",
+    "canvas-sketch-util": "^1.10.0"
+  }
+}
