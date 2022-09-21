@@ -15,31 +15,29 @@ const sketch = () => {
       return degrees / 180 * Math.PI;
     };
 
-    const cx = width * 0.3;
-    const cy = height * 0.45;
+    const cx = width * 0.5;
+    const cy = height * 0.5;
     const w = width * 0.001;
     const h = height * 0.3;
     let x,y;
 
     const num =320;
-    const radius = width * 0.05;
+    const radius = width * 0.1;
 
     for (let i =0; i <num; i++){
 
       const slice = degToRad(360/num);
-      const angle = slice * i ;
+      const angle = slice * i;
 
-      x = cx + radius * Math.sin(angle * Math.PI * 1.618);
-      y = cy -10 + radius * Math.cos(angle * Math.PI * 1.618);
+      x = cx + radius * Math.sin(angle * Math.PI  * 100);
+      y = cy - 40+ radius * Math.cos(angle * Math.PI * -0.1);
 
       context.save();
       context.translate(x,y);
       context.rotate(-angle);
-      context.shadowBlur = 1.618;
-      context.shadowColor = "black";
 
       context.beginPath();
-      context.rect(-w*1.618,- h*1.618, w, h);
+      context.rect(-w*0.9,- h*0.9, w, h);
       context.fill();
       context.restore()
     };
@@ -49,3 +47,16 @@ const sketch = () => {
 };
 
 canvasSketch(sketch, settings);
+
+
+x = cx + radius * Math.sin(angle * Math.PI  * -.880);
+y = cy - 40+ radius * Math.cos(angle * Math.PI * -0.1);
+
+context.save();
+context.translate(x,y);
+context.rotate(-angle);
+
+context.beginPath();
+context.rect(-w*0.9,- h*0.9, w, h);
+context.fill();
+context.restore()
