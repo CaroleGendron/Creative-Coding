@@ -17,7 +17,7 @@ const sketch = ({context, width, height}) => {
   }
 
   return ({ context, width, height }) => {
-    context.fillStyle = 'white';
+    context.fillStyle = '#F6F3E1';
     context.fillRect(0, 0, width, height);
 
     agents.forEach(agent => {
@@ -42,10 +42,26 @@ class Agent {
   }
 
   draw(context){
-    context.fillStyle = "black"
+    var randomColor = getRandomColor();
     context.beginPath();
     context.arc(this.pos.x, this.pos.y, 10, 0, Math.PI *2 );
-    context.fillStyle = "black";
-    context.fill()
+    context.fillStyle = randomColor;
+    context.fill();
+    context.strokeStyle = randomColor;
+    context.stroke();
+    context.shadowColor = "grey";
+    context.shadowBlur = 4;
+    context.shadowOffsetY = 20;
+    context.shadowOffsetX = 20;
   }
+}
+
+
+function getRandomColor() {
+  var letters = '0123456789ABCDEF';
+  var color = '#';
+  for (var i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
 }
