@@ -2,14 +2,6 @@ const canvasSketch = require('canvas-sketch');
 const random = require('canvas-sketch-util/random');
 const math = require('canvas-sketch-util/math');
 
-
-
-// or the shorthand way
-const country = {
-  country: "Country",
-  population: "Population"
-}
-
 const settings = {
   dimensions: [ 1000, 1000 ],
   //for the animation
@@ -26,7 +18,7 @@ const sketch = ({context, width, height}) => {
 
   const agents = [];
 
-  for (let i = 0; i < 27; i++) {
+  for (let i = 0; i < 40; i++) {
     const x = random.range(0, width);
     const y = random.range(0, height);
 
@@ -123,11 +115,3 @@ class Agent {
 
 }
 
-function getRandomColor() {
-  var letters = '0123456789ABCDEF';
-  var color = '#';
-  for (var i = 0; i < 6; i++) {
-      color += letters[Math.floor(Math.random() * 16)];
-  }
-  return color;
-}
