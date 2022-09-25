@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/CaroleGendron/Creative-Coding#readme",
   "dependencies": {
+    "bezier-easing": "^2.1.0",
     "canvas-sketch": "^0.7.6",
     "canvas-sketch-util": "^1.10.0"
   }
