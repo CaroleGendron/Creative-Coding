@@ -11,7 +11,13 @@ const settings = {
 };
 
 const params= {
-  indic: "Country", //set default value in the pane
+  country: "Europe", //set default value in the pane
+  CO2: "Europe",
+  footprint: "Europe",
+  landPolluted: "Europe",
+  waste: "Europe",
+  waterStress:"Europe"
+
 }
 const sketch = () => {
   return ({ context, width, height }) => {
@@ -20,7 +26,8 @@ const sketch = () => {
 
     context.fillStyle = 'black';
 
- 
+    //create country dictionnary - 27 countries - , 5 indics
+    const Europe ={'CO2': 5 ,'Footprint': 5 ,'Land_polluted': 5 ,'Waste': 5 ,'Water_stress': 5 }
     const AUT ={'CO2': 7 ,'Footprint': 8 ,'Land_polluted': 7 ,'Waste': 8 ,'Water_stress': 4 }
     const BEL ={'CO2': 9 ,'Footprint': 9 ,'Land_polluted': 7 ,'Waste': 7 ,'Water_stress': 10 }
     const BGR ={'CO2': 5 ,'Footprint': 2 ,'Land_polluted': 7 ,'Waste': 10 ,'Water_stress': 9 }
@@ -52,10 +59,10 @@ const sketch = () => {
 
     //creation indicator list to be able to loop
     const country_list = ['AUT','BEL','BGR','CYP','CZE','DEU','DNK','ESP','EST','FIN','FRA','GRC','HRV','HUN','IRL','ITA','LTU','LUX','LVA','MLT','NLD','POL','PRT','ROU','SVK','SVN','SWE'];
-    const indicator = params.indic// indicator_list[Math.floor(Math.random()*indicator_list.length)];
+    const country = params.country// indicator_list[Math.floor(Math.random()*indicator_list.length)];
 
     const degToRad = (degrees) => {
-      return degrees / f_pop * Math.PI; //f_pop 1 DEFINITION DENTELLE. 1 TO 360
+      return degrees / 12 * Math.PI; //f_pop 1 DEFINITION DENTELLE. 1 TO 360
     };
 
     const cx = width * 0.5;
@@ -64,13 +71,13 @@ const sketch = () => {
     const h = height * 0.3; // f_pop W 0.1 to 1
     let x,y;
 
-    const num = d_land ; //d_land DEFINITION DENTELLE. FROM 1 TO 2000
-    const radius = width * c_happy //c_happy  from 0.1 to 1
+    const num = 12 ; //d_land DEFINITION DENTELLE. FROM 1 TO 2000
+    const radius = width * 12 //c_happy  from 0.1 to 1
 
     for (let i =0; i <num; i++){
 
      // const slice = degToRad(360/num);
-      const slice = degToRad(a_co2/num); //a_co2 27 to 360
+      const slice = degToRad(12/num); //a_co2 27 to 360
       const angle = slice * i;
 
 
@@ -80,7 +87,7 @@ const sketch = () => {
       context.save();
       context.translate(x,y);
       context.rotate(-angle);
-      context.shadowBlur =  b_wealth;//b / /_wealth  +1 to +1000 /
+      context.shadowBlur =  12;//b / /_wealth  +1 to +1000 /
       context.shadowColor = "grey";
 
 
@@ -109,7 +116,8 @@ const createPane = () => {
   let folder;
 
   folder = pane.addFolder({ title : "European Countries"});
-  folder.addInput(params, "Country", { options : { country: 5,"BEL" : 5,"BGR" : 5,"CYP" : 5,"CZE" : 5,"DEU" : 5,"DNK" : 5,"ESP" : 5,"EST" : 5,"FIN" : 5,"FRA" : 5,"GRC" : 5,"HRV" : 5,"HUN" : 5,"IRL" : 5,"ITA" : 5,"LTU" : 5,"LUX" : 5,"LVA" : 5,"MLT" : 5,"NLD" : 5,"POL" : 5,"PRT" : 5,"ROU" : 5,"SVK" : 5,"SVN" : 5,"SWE" : 5}});
+  folder.addInput(params, "country", { options : { country: 5,"BEL" : 5,"BGR" : 5,"CYP" : 5,"CZE" : 5,"DEU" : 5,"DNK" : 5,"ESP" : 5,"EST" : 5,"FIN" : 5,"FRA" : 5,"GRC" : 5,"HRV" : 5,"HUN" : 5,"IRL" : 5,"ITA" : 5,"LTU" : 5,"LUX" : 5,"LVA" : 5,"MLT" : 5,"NLD" : 5,"POL" : 5,"PRT" : 5,"ROU" : 5,"SVK" : 5,"SVN" : 5,"SWE" : 5}});
+  folder.addInput(params, 'CO2', { min: 0, max: 10, step: 1 });
 };
 
 createPane();
