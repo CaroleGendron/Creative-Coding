@@ -143,7 +143,6 @@ const sketch = () => {
     context.restore()
       };
 
-
   //center the title
   const len_text = context.measureText(indicator).width;
   const x_center = width/2 - (len_text /2);
