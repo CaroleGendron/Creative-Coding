@@ -33,8 +33,22 @@ const sketch = () => {
     context.fillRect(xPos,yPos,recWidth,recHeight);
     context.restore()
 
+    //Function "centerX" to find center text position x, automatically
+    const centerX = (text) => {
+      const metrics = context.measureText(text);
+      const textWidth =  metrics.width;
+      return (width/2) - (textWidth/2)
+    };
 
-    // //Position thDraw a red line at y = 100
+    //Function "centerX"  used Title text cosmetics and center
+    const title = "Hypnose"
+    context.fillStyle = 'grey';
+    context.font = "70px futura";
+    const titleCenter = centerX( title)
+    context.fillText(title, titleCenter, 1010)
+
+
+    // //Position to Draw a red line at y = 100
     context.save()
     context.strokeStyle = "red";
     context.moveTo(5, 700);
