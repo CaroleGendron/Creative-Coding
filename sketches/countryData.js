@@ -45,10 +45,10 @@ const settings = {
 
 
 const params= {
-  CO2: 5,
-  footprint: 5,
-  landPolluted: 5,
-  waste: 5,
+  CO2: 10,
+  footprint: 8,
+  landPolluted: 7,
+  waste:7,
   waterStress: 5,
 
 }
@@ -67,7 +67,7 @@ const sketch = () => {
   const landPolluted = params.landPolluted; //slice
   const waste = params.waste; //angle
   const waterStress = params.waterStress; //x
-  const yParam = params.waterStress; //x
+  const element4 = params.element4; //x
 
   //creation indicator list to be able to select/get random indicator and then loop
   const indicator_list = ["CO2","Footprint", "Land_polluted", "Waste", "Water_stress"];
@@ -101,36 +101,37 @@ const sketch = () => {
 
   //position the drawing
   const cx = width * 0.5;
-  const cy = height * 0.45;
+  const cy = height * 0.48;
   const w = width * 0.0025;
   const h = height * 0.15;
 
   let x,y;
 
-  const scaleNum=math.mapRange(CO2, 0,10, 100, 2000)
-  const num = 1000 ///scaleNum ; //line density
+  const scaleNum=math.mapRange(CO2, 0,10, 100, 3000)
+  const num = scaleNum ///scaleNum ; //line density
+  console.log("num", num)
 
-  const scaleRadius=math.mapRange(footprint, 0,10, 0, 1)
-  const radius = width * 0.26 //scaleRadius //dispersion line
+  const scaleRadius=math.mapRange(footprint, 0,10, 0, 0.7)
+  const radius = width * scaleRadius //scaleRadius //dispersion line
 
 
   //convert degree to radiant for slice and angle
-  const scale360=math.mapRange(landPolluted, 0,10, 1, 360)
-  console.log("scale360::", scale360 ,"landPolluted",landPolluted )
+  const scale360=math.mapRange(landPolluted, 0,10, 200, 360)
   const degToRad = (degrees) => {
-    return degrees / 360  * Math.PI ; // scale360 rounding -100/360
+    return degrees / scale360  * Math.PI*2 ; // scale360 rounding -100/360
   };
 
   for (let i =0; i <num; i++){
 
   // const slice = degToRad(360/num);
-  const slice = degToRad(360/num); ///scale360
-  const angle = slice * i *1.6 //*landPolluted; // close up details
+  const slice = degToRad(scale360/num); ///scale360  NB VOLUTE 100 -500
+  const factorPi=math.mapRange(landPolluted, 0,10, 0, 0.5)
+  const angle = slice * i * factorPi //*landPolluted; // close up details
 
-  const scaleWaste=math.mapRange(waste, 0,10, -10, 10)
-  const scalewaterStress=math.mapRange(waterStress, 0,10, -10, 10)
-  x = cx + radius * Math.sin(angle * Math.PI  * -2); // * scaleWaste
-  y = cy + radius * Math.cos(angle * Math.PI * -1.6 ); // / waterStress
+  const scaleWaste=math.mapRange(waste, 0,10, 2, 5)
+  const scalewaterStress=math.mapRange(waterStress, 0,10, 0.1, 1)
+  x = cx + radius * Math.sin(angle * Math.PI  * scaleWaste); // * scaleWaste
+  y = cy + radius * Math.cos(angle * Math.PI  / -scalewaterStress ); // / waterStress
 
   context.save();
   context.translate(x,y);
