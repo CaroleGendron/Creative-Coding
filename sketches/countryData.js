@@ -101,49 +101,45 @@ const sketch = () => {
 
   //position the drawing
   const cx = width * 0.5;
-  const cy = height * 0.5;
-  const w = width * 0.02;
-  const h = height * 0.1;
+  const cy = height * 0.45;
+  const w = width * 0.0025;
+  const h = height * 0.15;
 
   let x,y;
 
   const scaleNum=math.mapRange(CO2, 0,10, 100, 2000)
-  const num = 50 ///scaleNum ; //line density
+  const num = 1000 ///scaleNum ; //line density
 
   const scaleRadius=math.mapRange(footprint, 0,10, 0, 1)
-  const radius = width * 0.3 //scaleRadius //dispersion line
+  const radius = width * 0.26 //scaleRadius //dispersion line
 
 
   //convert degree to radiant for slice and angle
   const scale360=math.mapRange(landPolluted, 0,10, 1, 360)
   console.log("scale360::", scale360 ,"landPolluted",landPolluted )
   const degToRad = (degrees) => {
-    return degrees / 180  * Math.PI; // scale360 rounding
+    return degrees / 360  * Math.PI ; // scale360 rounding -100/360
   };
 
   for (let i =0; i <num; i++){
 
   // const slice = degToRad(360/num);
   const slice = degToRad(360/num); ///scale360
-  const angle = slice * i //*landPolluted; // close up details
-
+  const angle = slice * i *1.6 //*landPolluted; // close up details
 
   const scaleWaste=math.mapRange(waste, 0,10, -10, 10)
   const scalewaterStress=math.mapRange(waterStress, 0,10, -10, 10)
-  x = cx + radius * Math.sin(angle * Math.PI  * 10); // * scaleWaste
-  y = cy + radius * Math.cos(angle * Math.PI * -10 ); // / waterStress
-
-
+  x = cx + radius * Math.sin(angle * Math.PI  * -2); // * scaleWaste
+  y = cy + radius * Math.cos(angle * Math.PI * -1.6 ); // / waterStress
 
   context.save();
   context.translate(x,y);
-  context.rotate(angle);
-  context.transform(1.2,5,0,Math.PI/2,0,0)
+  context.rotate(-angle);
   context.shadowBlur =  1.616;
   context.shadowColor = "grey";
 
   context.beginPath();
-  context.rect(w * 0.25 ,h * 0.7, w, h); //-w * 0.30 ,- h * 0.3, w, h
+  context.rect(-w * 25 ,-h * 0.7, w, h); //-w * 0.30 ,- h * 0.3, w, h
   context.fill()
   context.restore();
   }
