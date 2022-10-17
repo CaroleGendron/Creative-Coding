@@ -1,4 +1,7 @@
 
+// TODO : order country based on geography.
+// TODO : put ISO3 on EU map 2D
+
 const canvasSketch = require('canvas-sketch');
 const math = require('canvas-sketch-util/math'); //to map values
 const Tweakpane = require('tweakpane');
@@ -122,7 +125,7 @@ const sketch = () => {
     context.save();
     context.translate(x,y);
     context.rotate(-angle-2.8);
-    context.fillStyle = "#DAA61B";
+    context.fillStyle = "#E0C602" //"#E0C602"; //color of country name
     context.font = "30px Calibri";
     context.fillText( country_name , -161, 100)
 
