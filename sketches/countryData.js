@@ -13,43 +13,40 @@ const settings = {
 };
 
 //     //create country dictionnary - 27 countries - , 5 indics
-//     // const Europe ={'CO2': 5 ,'Footprint': 5 ,'Land_polluted': 5 ,'Waste': 5 ,'Water_stress': 5 }
-//     // const AUT ={'CO2': 7 ,'Footprint': 8 ,'Land_polluted': 7 ,'Waste': 8 ,'Water_stress': 4 }
-//     // const BEL ={'CO2': 9 ,'Footprint': 9 ,'Land_polluted': 7 ,'Waste': 7 ,'Water_stress': 10 }
-//     // const BGR ={'CO2': 5 ,'Footprint': 2 ,'Land_polluted': 7 ,'Waste': 10 ,'Water_stress': 9 }
-//     // const CYP ={'CO2': 8 ,'Footprint': 0 ,'Land_polluted': 10 ,'Waste': 3 ,'Water_stress': 8 }
-//     // const CZE ={'CO2': 10 ,'Footprint': 7 ,'Land_polluted': 3 ,'Waste': 4 ,'Water_stress': 7 }
-//     // const DEU ={'CO2': 9 ,'Footprint': 6 ,'Land_polluted': 7 ,'Waste': 6 ,'Water_stress': 9 }
-//     // const DNK ={'CO2': 6 ,'Footprint': 10 ,'Land_polluted': 7 ,'Waste': 5 ,'Water_stress': 6 }
-//     // const ESP ={'CO2': 4 ,'Footprint': 1 ,'Land_polluted': 10 ,'Waste': 4 ,'Water_stress': 10 }
-//     // const EST ={'CO2': 9 ,'Footprint': 10 ,'Land_polluted': 7 ,'Waste': 10 ,'Water_stress': 6 }
-//     //const FIN ={'CO2': 4 ,'Footprint': 9 ,'Land_polluted': 0 ,'Waste': 10 ,'Water_stress': 5 }
-    // const FRA ={'CO2': 3 ,'Footprint': 5 ,'Land_polluted': 8 ,'Waste': 7 ,'Water_stress': 7 }
-//     // const GRC ={'CO2': 6 ,'Footprint': 4 ,'Land_polluted': 9 ,'Waste': 6 ,'Water_stress': 7 }
-//     // const HRV ={'CO2': 2 ,'Footprint': 3 ,'Land_polluted': 7 ,'Waste': 1 ,'Water_stress': 1 }
-//     // const HUN ={'CO2': 4 ,'Footprint': 2 ,'Land_polluted': 9 ,'Waste': 2 ,'Water_stress': 4 }
-//     // const IRL ={'CO2': 8 ,'Footprint': 6 ,'Land_polluted': 7 ,'Waste': 3 ,'Water_stress': 2 }
-//     // const ITA ={'CO2': 5 ,'Footprint': 5 ,'Land_polluted': 9 ,'Waste': 4 ,'Water_stress': 8 }
-//     // const LTU ={'CO2': 2 ,'Footprint': 7 ,'Land_polluted': 1 ,'Waste': 2 ,'Water_stress': 1 }
-    // const LUX ={'CO2': 10 ,'Footprint': 1 ,'Land_polluted': 2 ,'Waste': 9 ,'Water_stress': 3 }
-//     // const LVA ={'CO2': 1 ,'Footprint': 9 ,'Land_polluted': 9 ,'Waste': 0 ,'Water_stress': 0 }
-    // const MLT ={'CO2': 2 ,'Footprint': 8 ,'Land_polluted': 7 ,'Waste': 7 ,'Water_stress': 10 }
-    // const NLD ={'CO2': 10 ,'Footprint': 6 ,'Land_polluted': 7 ,'Waste': 8 ,'Water_stress': 5 }
-//     // const POL ={'CO2': 7 ,'Footprint': 4 ,'Land_polluted': 3 ,'Waste': 6 ,'Water_stress': 9 }
-//     // const PRT ={'CO2': 3 ,'Footprint': 3 ,'Land_polluted': 10 ,'Waste': 1 ,'Water_stress': 6 }
-//     // const ROU ={'CO2': 1 ,'Footprint': 2 ,'Land_polluted': 1 ,'Waste': 9 ,'Water_stress': 4 }
-//     // const SVK ={'CO2': 6 ,'Footprint': 4 ,'Land_polluted': 2 ,'Waste': 2 ,'Water_stress': 2 }
-    // const SVN ={'CO2': 7 ,'Footprint': 7 ,'Land_polluted': 3 ,'Waste': 5 ,'Water_stress': 3 }
-    // const SWE ={'CO2': 0 ,'Footprint': 10 ,'Land_polluted': 7 ,'Waste': 9 ,'Water_stress': 2 }
-
-
+// const AUT=  {  "CO2" :  7, "GDP" :  8, "Happy" :  9, "Land" :  6, "Pop" :  6 }
+// const HUN=  {  "CO2" :  4, "GDP" :  2, "Happy" :  2, "Land" :  7, "Pop" :  6 }
+// const SVK=  {  "CO2" :  6, "GDP" :  3, "Happy" :  5, "Land" :  4, "Pop" :  4 }
+// const CZE=  {  "CO2" :  10, "GDP" :  4, "Happy" :  7, "Land" :  5, "Pop" :  7 }
+// const POL=  {  "CO2" :  7, "GDP" :  2, "Happy" :  5, "Land" :  9, "Pop" :  9 }
+// const LTU=  {  "CO2" :  2, "GDP" :  4, "Happy" :  4, "Land" :  4, "Pop" :  3 }
+// const LVA=  {  "CO2" :  1, "GDP" :  3, "Happy" :  3, "Land" :  4, "Pop" :  2 }
+// const EST=  {  "CO2" :  9, "GDP" :  5, "Happy" :  2, "Land" :  3, "Pop" :  2 }
+// const FIN=  {  "CO2" :  4, "GDP" :  9, "Happy" :  10, "Land" :  9, "Pop" :  4 }
+// const SWE=  {  "CO2" :  1, "GDP" :  9, "Happy" :  9, "Land" :  10, "Pop" :  7 }
+// const DNK=  {  "CO2" :  6, "GDP" :  10, "Happy" :  10, "Land" :  3, "Pop" :  5 }
+// const DEU=  {  "CO2" :  9, "GDP" :  8, "Happy" :  8, "Land" :  9, "Pop" :  10 }
+// const LUX=  {  "CO2" :  10, "GDP" :  10, "Happy" :  9, "Land" :  1, "Pop" :  1 }
+// const NLD=  {  "CO2" :  10, "GDP" :  9, "Happy" :  10, "Land" :  2, "Pop" :  8 }
+// const BEL=  {  "CO2" :  9, "GDP" :  7, "Happy" :  7, "Land" :  2, "Pop" :  8 }
+// const IRL=  {  "CO2" :  8, "GDP" :  10, "Happy" :  8, "Land" :  5, "Pop" :  4 }
+// const FRA=  {  "CO2" :  3, "GDP" :  7, "Happy" :  6, "Land" :  10, "Pop" :  10 }
+// const PRT=  {  "CO2" :  3, "GDP" :  4, "Happy" :  2, "Land" :  6, "Pop" :  6 }
+// const ESP=  {  "CO2" :  4, "GDP" :  6, "Happy" :  6, "Land" :  10, "Pop" :  9 }
+// const ITA=  {  "CO2" :  5, "GDP" :  7, "Happy" :  6, "Land" :  8, "Pop" :  10 }
+// const MLT=  {  "CO2" :  2, "GDP" :  6, "Happy" :  7, "Land" :  1, "Pop" :  1 }
+// const GRC=  {  "CO2" :  6, "GDP" :  2, "Happy" :  1, "Land" :  7, "Pop" :  7 }
+// const CYP=  {  "CO2" :  8, "GDP" :  6, "Happy" :  3, "Land" :  1, "Pop" :  1 }
+// const BGR=  {  "CO2" :  5, "GDP" :  1, "Happy" :  1, "Land" :  7, "Pop" :  5 }
+// const ROU=  {  "CO2" :  1, "GDP" :  1, "Happy" :  4, "Land" :  8, "Pop" :  9 }
+// const HRV=  {  "CO2" :  2, "GDP" :  1, "Happy" :  1, "Land" :  6, "Pop" :  3 }
+// const SVN=  {  "CO2" :  7, "GDP" :  5, "Happy" :  4, "Land" :  2, "Pop" :  2 }
 
 const params= {
-  CO2: 10,
-  footprint: 8,
-  landPolluted: 7,
-  waste:7,
-  waterStress: 5,
+  CO2: 2,
+  GDP: 7,
+  Happy: 6,
+  Land:8,
+  Pop: 10,
 
 }
 
@@ -62,15 +59,15 @@ const sketch = () => {
   context.fillStyle = 'black';
 
   //create params variables
-  const CO2 = params.CO2; //num
-  const footprint = params.footprint; //radius
-  const landPolluted = params.landPolluted; //slice
-  const waste = params.waste; //angle
-  const waterStress = params.waterStress; //x
+  const CO2 = params.CO2; //blur lines
+  const GDP = params.GDP; //radius => dispersion line
+  const Happy = params.Happy; //slice => number of loops
+  const Land = params.Land; // num => line density
+  const Pop = params.Pop; //x
   const element4 = params.element4; //x
 
   //creation indicator list to be able to select/get random indicator and then loop
-  const indicator_list = ["CO2","Footprint", "Land_polluted", "Waste", "Water_stress"];
+  const indicator_list = ["CO2","GDP", "Land_polluted", "Land", "Water_stress"];
   const indicator =  indicator_list[Math.floor(Math.random()*indicator_list.length)];//params.indic
   console.log("indicator", indicator)
 
@@ -81,21 +78,21 @@ const sketch = () => {
     console.log("indic CO2 : ", CO2)
     newIndic = CO2 ;
   }
-  else if  (indicator== "Footprint"){
-    console.log("indic Footprint: ", footprint)
-    newIndic =footprint;
+  else if  (indicator== "GDP"){
+    console.log("indic GDP: ", GDP)
+    newIndic =GDP;
   }
   else if  (indicator== "Land_polluted"){
-    console.log("Land_polluted: ", landPolluted)
-    newIndic =landPolluted;
+    console.log("Land_polluted: ", Happy)
+    newIndic =Happy;
   }
-  else if  (indicator== "Waste"){
-    console.log("indic Waste: ", waste)
-    newIndic =waste;
+  else if  (indicator== "Land"){
+    console.log("indic Land: ", Land)
+    newIndic =Land;
   }
   else if  (indicator== "Water_stress"){
-    console.log("indic Water_stress: ",  waterStress)
-    newIndic = waterStress;
+    console.log("indic Water_stress: ",  Pop)
+    newIndic = Pop;
   }
 
 
@@ -107,16 +104,16 @@ const sketch = () => {
 
   let x,y;
 
-  const scaleNum=math.mapRange(CO2, 0,10, 100, 3000)
+  const scaleNum=math.mapRange(Land, 0,10, 100, 3000)
   const num = scaleNum ///scaleNum ; //line density
   console.log("num", num)
 
-  const scaleRadius=math.mapRange(footprint, 0,10, 0, 0.7)
+  const scaleRadius=math.mapRange(GDP, 0,10, 0, 1)
   const radius = width * scaleRadius //scaleRadius //dispersion line
 
 
   //convert degree to radiant for slice and angle
-  const scale360=math.mapRange(landPolluted, 0,10, 200, 360)
+  const scale360=math.mapRange(Happy, 0,10, 200, 360)
   const degToRad = (degrees) => {
     return degrees / scale360  * Math.PI*2 ; // scale360 rounding -100/360
   };
@@ -125,22 +122,24 @@ const sketch = () => {
 
   // const slice = degToRad(360/num);
   const slice = degToRad(scale360/num); ///scale360  NB VOLUTE 100 -500
-  const factorPi=math.mapRange(landPolluted, 0,10, 0, 0.5)
-  const angle = slice * i * factorPi //*landPolluted; // close up details
+  const factorPi=math.mapRange(Happy, 0,10, 0, 1)
+  const angle = slice * i * factorPi //*Happy; // close up details
 
-  const scaleWaste=math.mapRange(waste, 0,10, 2, 5)
-  const scalewaterStress=math.mapRange(waterStress, 0,10, 0.1, 1)
-  x = cx + radius * Math.sin(angle * Math.PI  * scaleWaste); // * scaleWaste
-  y = cy + radius * Math.cos(angle * Math.PI  / -scalewaterStress ); // / waterStress
+  const scaleCO2=math.mapRange(CO2, 0,10, 2, 5)
+  const scalePop=math.mapRange(Pop, 0,10, 0.1, 1)
+  x = cx + radius * Math.sin(angle * Math.PI  * scaleCO2); // * scaleLand
+  y = cy + radius * Math.cos(angle * Math.PI  / scalePop ); // / Pop
 
   context.save();
   context.translate(x,y);
-  context.rotate(-angle);
-  context.shadowBlur =  1.616;
+  context.rotate(angle);
+  const scaleCO22=math.mapRange(CO2, 0,10, 1, 100)
+  context.shadowBlur =  scaleCO22; //1 t0 50
   context.shadowColor = "grey";
 
   context.beginPath();
-  context.rect(-w * 25 ,-h * 0.7, w, h); //-w * 0.30 ,- h * 0.3, w, h
+  const scaleLand=math.mapRange(Land, 0,10, 1, 500)
+  context.rect(-w * 25 ,-h * 0.7, w-params.Land, h+scaleLand); //-w * 0.30 ,- h * 0.3, w, h
   context.fill()
   context.restore();
   }
@@ -153,17 +152,18 @@ const sketch = () => {
   };
 
   //Title cosmetics and center
-  const title = "Hypnose"
-  context.fillStyle = 'grey';
+  const title = "Hungaria"
+  context.fillStyle = 'black';
   context.font = "70px futura";
   const titleCenter = centerX( title)
   context.fillText(title, titleCenter, 1010)
 
   //Title serie name + font
   const serie = "ⓒHumAIn_Art" //"Variations of π (pi)"
+  context.fillStyle = 'grey';
   context.font = "25px futura";
   const serieCenter = centerX(serie)
-  context.fillText(serie, serieCenter, 1050)
+  context.fillText(serie, serieCenter, 1055)
 
   };
 };
@@ -176,10 +176,10 @@ const createPane = () => {
 
   folder = pane.addFolder({ title : "Indicators"});
   folder.addInput(params, 'CO2', { min: 1, max: 10 });
-  folder.addInput(params, 'footprint', { min: 0, max: 10 });
-  folder.addInput(params, 'landPolluted', { min: 0, max: 10 });
-  folder.addInput(params, 'waste', { min: 0, max: 10 });
-  folder.addInput(params, 'waterStress', { min: 0, max: 10 });
+  folder.addInput(params, 'GDP', { min: 0, max: 10 });
+  folder.addInput(params, 'Happy', { min: 0, max: 10 });
+  folder.addInput(params, 'Land', { min: 0, max: 10 });
+  folder.addInput(params, 'Pop', { min: 0, max: 10 });
 
 
 };
