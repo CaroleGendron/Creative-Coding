@@ -1,28 +1,57 @@
-﻿Country,ISO3,Capital,Capital_LAT,Capital_LONG
-Austria,AUT,Vienna,48,16
-Belgium,BEL,Brussels,51,4
-Bulgaria,BGR,Sofia,43,23
-Croatia,HRV,Zagreb,46,16
-Cyprus,CYP,Nicosia,35,33
-Czechia,CZE,Prague,50,14
-Denmark,DNK,Copenhagen,56,13
-Estonia,EST,Tallinn,59,25
-Finland,FIN,Helsinki,60,25
-France,FRA,Paris,49,2
-Germany,DEU,Berlin,53,13
-Greece,GRC,Athens,38,24
-Hungary,HUN,Budapest,48,19
-Ireland,IRL,Dublin,53,-6
-Italy,ITA,Rome,42,12
-Latvia,LVA,Riga,57,24
-Lithuania,LTU,Vilnius,55,25
-Luxembourg,LUX,Luxembourg,50,6
-Malta,MLT,Valletta,36,15
-Netherlands,NLD,Amsterdam,52,5
-Poland,POL,Warsaw,52,21
-Portugal,PRT,Lisbon,39,-9
-Romania,ROU,Bucharest,44,26
-Slovakia,SVK,Bratislava,48,17
-Slovenia,SVN,Ljubljana,46,15
-Spain,ESP,Madrid,40,-4
-Sweden,SWE,Stockholm,59,18
+﻿Country,ISO3,Capital,Capital_LAT,Capital_LONG,rank
+Austria,AUT,Vienna,48,16,1
+Hungary,HUN,Budapest,48,19,2
+Slovakia,SVK,Bratislava,48,17,3
+Czechia,CZE,Prague,50,14,4
+Poland,POL,Warsaw,52,21,5
+Lithuania,LTU,Vilnius,55,25,6
+Latvia,LVA,Riga,57,24,7
+Estonia,EST,Tallinn,59,25,8
+Finland,FIN,Helsinki,60,25,9
+Sweden,SWE,Stockholm,59,18,10
+Denmark,DNK,Copenhagen,56,13,11
+Germany,DEU,Berlin,53,13,12
+Luxembourg,LUX,Luxembourg,50,6,13
+Netherlands,NLD,Amsterdam,52,5,14
+Belgium,BEL,Brussels,51,4,15
+France,FRA,Paris,49,2,16
+Ireland,IRL,Dublin,53,-6,17
+Portugal,PRT,Lisbon,39,-9,18
+Spain,ESP,Madrid,40,-4,19
+Italy,ITA,Rome,42,12,20
+Malta,MLT,Valletta,36,15,21
+Greece,GRC,Athens,38,24,22
+Cyprus,CYP,Nicosia,35,33,23
+Bulgaria,BGR,Sofia,43,23,24
+Romania,ROU,Bucharest,44,26,25
+Croatia,HRV,Zagreb,46,16,26
+Slovenia,SVN,Ljubljana,46,15,27
+,,,,,
+"""AUT"",",,,,,
+AUT,"'AUT', ","['AUT', ","['AUT', 'HUN', 'SVK', 'CZE', 'POL', 'LTU', 'LVA', 'EST', 'FIN', 'SWE', 'DNK', 'DEU', 'LUX', 'NLD', 'BEL', 'FRA', 'IRL', 'PRT', 'ESP', 'ITA', 'MLT', 'GRC', 'CYP', 'BGR', 'ROU', 'HRV', SVN']",,
+HUN,"'HUN', ","'HUN', ","['AUT', 'HUN', 'SVK', 'CZE', 'POL', 'LTU', 'LVA', 'EST', 'FIN', 'SWE', 'DNK', 'DEU', 'LUX', 'NLD', 'BEL', 'FRA', 'IRL', 'PRT', 'ESP', 'ITA', 'MLT', 'GRC', 'CYP', 'BGR', 'ROU', 'HRV', SVN']",,
+SVK,"'SVK', ","'SVK', ",,,
+CZE,"'CZE', ","'CZE', ",,,
+POL,"'POL', ","'POL', ",,,
+LTU,"'LTU', ","'LTU', ",,,
+LVA,"'LVA', ","'LVA', ",,,
+EST,"'EST', ","'EST', ",,,
+FIN,"'FIN', ","'FIN', ",,,
+SWE,"'SWE', ","'SWE', ",,,
+DNK,"'DNK', ","'DNK', ",,,
+DEU,"'DEU', ","'DEU', ",,,
+LUX,"'LUX', ","'LUX', ",,,
+NLD,"'NLD', ","'NLD', ",,,
+BEL,"'BEL', ","'BEL', ",,,
+FRA,"'FRA', ","'FRA', ",,,
+IRL,"'IRL', ","'IRL', ",,,
+PRT,"'PRT', ","'PRT', ",,,
+ESP,"'ESP', ","'ESP', ",,,
+ITA,"'ITA', ","'ITA', ",,,
+MLT,"'MLT', ","'MLT', ",,,
+GRC,"'GRC', ","'GRC', ",,,
+CYP,"'CYP', ","'CYP', ",,,
+BGR,"'BGR', ","'BGR', ",,,
+ROU,"'ROU', ","'ROU', ",,,
+HRV,"'HRV', ","'HRV', ",,,
+SVN,"'SVN', ",SVN'],,,
