@@ -42,10 +42,10 @@ const settings = {
 // const SVN=  {  "CO2" :  7, "GDP" :  5, "Happy" :  4, "Land" :  2, "Pop" :  2 }
 
 const params= {
-  CO2: 2,
+  CO2: 3,
   GDP: 7,
   Happy: 6,
-  Land:8,
+  Land:10,
   Pop: 10,
 
 }
@@ -64,10 +64,9 @@ const sketch = () => {
   const Happy = params.Happy; //slice => number of loops
   const Land = params.Land; // num => line density
   const Pop = params.Pop; //x
-  const element4 = params.element4; //x
 
   //creation indicator list to be able to select/get random indicator and then loop
-  const indicator_list = ["CO2","GDP", "Land_polluted", "Land", "Water_stress"];
+  const indicator_list = ["CO2","GDP", "Happy", "Land", "Population"];
   const indicator =  indicator_list[Math.floor(Math.random()*indicator_list.length)];//params.indic
   console.log("indicator", indicator)
 
@@ -82,64 +81,64 @@ const sketch = () => {
     console.log("indic GDP: ", GDP)
     newIndic =GDP;
   }
-  else if  (indicator== "Land_polluted"){
-    console.log("Land_polluted: ", Happy)
+  else if  (indicator== "Happy"){
+    console.log("Population: ", Happy)
     newIndic =Happy;
   }
   else if  (indicator== "Land"){
     console.log("indic Land: ", Land)
     newIndic =Land;
   }
-  else if  (indicator== "Water_stress"){
-    console.log("indic Water_stress: ",  Pop)
+  else if  (indicator== "Population"){
+    console.log("indic Population: ",  Pop)
     newIndic = Pop;
   }
 
 
   //position the drawing
   const cx = width * 0.5;
-  const cy = height * 0.48;
-  const w = width * 0.0025;
-  const h = height * 0.15;
+  const cy = height * 0.4;
+  const w = width * 0.001;
+  const h = height * 0.3;
 
   let x,y;
 
-  const scaleNum=math.mapRange(Land, 0,10, 100, 3000)
-  const num = scaleNum ///scaleNum ; //line density
+  const scaleNum=math.mapRange(Land, 0,10, 100, 2000)
+  const num = 520 ///scaleNum ; //line density
   console.log("num", num)
 
-  const scaleRadius=math.mapRange(GDP, 0,10, 0, 1)
-  const radius = width * scaleRadius //scaleRadius //dispersion line
+  const scaleRadius=math.mapRange(GDP, 0,10, 0, 0.5)
+  const radius = width * 0.35 //scaleRadius //dispersion line
 
 
   //convert degree to radiant for slice and angle
-  const scale360=math.mapRange(Happy, 0,10, 200, 360)
+  const scale360=math.mapRange(Happy, 0,10, 0, 360)
   const degToRad = (degrees) => {
-    return degrees / scale360  * Math.PI*2 ; // scale360 rounding -100/360
+    return degrees / 360 * Math.PI; // scale360 rounding -100/360
   };
 
   for (let i =0; i <num; i++){
 
   // const slice = degToRad(360/num);
-  const slice = degToRad(scale360/num); ///scale360  NB VOLUTE 100 -500
-  const factorPi=math.mapRange(Happy, 0,10, 0, 1)
-  const angle = slice * i * factorPi //*Happy; // close up details
+  const slice = degToRad(350/num); ///scale360  NB VOLUTE 100 -500
+  // const factorPi=math.mapRange(Happy, 0, 10, 0, 0.5)
+  const angle = slice * i //*Happy; // close up details
 
   const scaleCO2=math.mapRange(CO2, 0,10, 2, 5)
   const scalePop=math.mapRange(Pop, 0,10, 0.1, 1)
-  x = cx + radius * Math.sin(angle * Math.PI  * scaleCO2); // * scaleLand
-  y = cy + radius * Math.cos(angle * Math.PI  / scalePop ); // / Pop
+  x = cx +10+ radius * Math.sin(angle * Math.PI  ); // * scaleLand
+  y = cy + radius * Math.cos(angle * Math.PI  ); // / Pop
 
   context.save();
   context.translate(x,y);
-  context.rotate(angle);
+  context.rotate(angle * Math.PI +1000 );
   const scaleCO22=math.mapRange(CO2, 0,10, 1, 100)
-  context.shadowBlur =  scaleCO22; //1 t0 50
+  context.shadowBlur =  1.618; //1 t0 50
   context.shadowColor = "grey";
 
   context.beginPath();
   const scaleLand=math.mapRange(Land, 0,10, 1, 500)
-  context.rect(-w * 25 ,-h * 0.7, w-params.Land, h+scaleLand); //-w * 0.30 ,- h * 0.3, w, h
+  context.rect(-w /Math.PI,- h * 0.90, w, h); //-w * 0.30 ,- h * 0.3, w, h
   context.fill()
   context.restore();
   }
@@ -152,7 +151,7 @@ const sketch = () => {
   };
 
   //Title cosmetics and center
-  const title = "Hungaria"
+  const title = "France"
   context.fillStyle = 'black';
   context.font = "70px futura";
   const titleCenter = centerX( title)
@@ -184,4 +183,4 @@ const createPane = () => {
 
 };
 
-// createPane();
+createPane();
