@@ -103,16 +103,16 @@ const sketch = () => {
 
   let x,y;
 
-  const scaleNum=math.mapRange(Land, 0,10, 100, 2000)
+  const scaleNum=math.mapRange(Land, 1,10, 100, 2000)
   const num = 520 ///scaleNum ; //line density
   console.log("num", num)
 
-  const scaleRadius=math.mapRange(GDP, 0,10, 0, 0.5)
+  const scaleRadius=math.mapRange(GDP, 1,10, 0, 0.5)
   const radius = width * 0.35 //scaleRadius //dispersion line
 
 
   //convert degree to radiant for slice and angle
-  const scale360=math.mapRange(Happy, 0,10, 0, 360)
+  const scale360=math.mapRange(Happy, 1,10, 0, 360)
   const degToRad = (degrees) => {
     return degrees / 360 * Math.PI; // scale360 rounding -100/360
   };
