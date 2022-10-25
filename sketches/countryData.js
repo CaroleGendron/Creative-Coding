@@ -13,7 +13,7 @@ const settings = {
 };
 
 //     //create country dictionnary - 27 countries - , 5 indics
-// const AUT=  {  "CO2" :  7, "GDP" :  8, "Happy" :  9, "Land" :  6, "Pop" :  6 }
+// const Austria=  {  "CO2" :  7, "GDP" :  8, "Happy" :  9, "Land" :  6, "Pop" :  6 }
 // const HUN=  {  "CO2" :  4, "GDP" :  2, "Happy" :  2, "Land" :  7, "Pop" :  6 }
 // const SVK=  {  "CO2" :  6, "GDP" :  3, "Happy" :  5, "Land" :  4, "Pop" :  4 }
 // const CZE=  {  "CO2" :  10, "GDP" :  4, "Happy" :  7, "Land" :  5, "Pop" :  7 }
@@ -41,13 +41,13 @@ const settings = {
 // const HRV=  {  "CO2" :  2, "GDP" :  1, "Happy" :  1, "Land" :  6, "Pop" :  3 }
 // const SVN=  {  "CO2" :  7, "GDP" :  5, "Happy" :  4, "Land" :  2, "Pop" :  2 }
 
+//set default values for indicators in the tweakpane
 const params= {
   CO2: 3,
   GDP: 7,
   Happy: 6,
   Land:10,
-  Pop: 10,
-
+  Pop: 10
 }
 
 const sketch = () => {
@@ -67,7 +67,7 @@ const sketch = () => {
 
   //creation indicator list to be able to select/get random indicator and then loop
   const indicator_list = ["CO2","GDP", "Happy", "Land", "Population"];
-  const indicator =  indicator_list[Math.floor(Math.random()*indicator_list.length)];//params.indic
+  const indicator =  params.indic;//indicator_list[Math.floor(Math.random()*indicator_list.length)];//
   console.log("indicator", indicator)
 
   //get selected indicator value
@@ -124,7 +124,7 @@ const sketch = () => {
   // const factorPi=math.mapRange(Happy, 0, 10, 0, 0.5)
   const angle = slice * i //*Happy; // close up details
 
-  const scaleCO2=math.mapRange(CO2, 0,10, 2, 5)
+  const scaleCO2=math.mapRange(CO2, 1,10, 2, 5)
   const scalePop=math.mapRange(Pop, 0,10, 0.1, 1)
   x = cx +10+ radius * Math.sin(angle * Math.PI  ); // * scaleLand
   y = cy + radius * Math.cos(angle * Math.PI  ); // / Pop
@@ -132,12 +132,12 @@ const sketch = () => {
   context.save();
   context.translate(x,y);
   context.rotate(angle * Math.PI +1000 );
-  const scaleCO22=math.mapRange(CO2, 0,10, 1, 100)
+  const scaleCO22=math.mapRange(CO2, 1,10, 1, 100)
   context.shadowBlur =  1.618; //1 t0 50
   context.shadowColor = "grey";
 
   context.beginPath();
-  const scaleLand=math.mapRange(Land, 0,10, 1, 500)
+  const scaleLand=math.mapRange(Land, 1,10, 1, 500)
   context.rect(-w /Math.PI,- h * 0.90, w, h); //-w * 0.30 ,- h * 0.3, w, h
   context.fill()
   context.restore();
@@ -154,11 +154,11 @@ const sketch = () => {
   const title = "France"
   context.fillStyle = 'black';
   context.font = "70px futura";
-  const titleCenter = centerX( title)
+  const titleCenter = centerX(title)
   context.fillText(title, titleCenter, 1010)
 
   //Title serie name + font
-  const serie = "ⓒHumAIn_Art" //"Variations of π (pi)"
+  const serie = "ⓒHumAIn_Art"
   context.fillStyle = 'grey';
   context.font = "25px futura";
   const serieCenter = centerX(serie)
@@ -175,10 +175,10 @@ const createPane = () => {
 
   folder = pane.addFolder({ title : "Indicators"});
   folder.addInput(params, 'CO2', { min: 1, max: 10 });
-  folder.addInput(params, 'GDP', { min: 0, max: 10 });
-  folder.addInput(params, 'Happy', { min: 0, max: 10 });
-  folder.addInput(params, 'Land', { min: 0, max: 10 });
-  folder.addInput(params, 'Pop', { min: 0, max: 10 });
+  folder.addInput(params, 'GDP', { min: 1, max: 10 });
+  folder.addInput(params, 'Happy', { min: 1, max: 10 });
+  folder.addInput(params, 'Land', { min: 1, max: 10 });
+  folder.addInput(params, 'Pop', { min: 1, max: 10 });
 
 
 };
