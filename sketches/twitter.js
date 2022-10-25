@@ -6,7 +6,7 @@ const load = require('load-asset');
 // We create an 'async' sketch
 canvasSketch(async ({ update }) => {
   // Await the image loader, it returns the loaded <img>
-  const image = await load('media/o2.jpg');
+  const image = await load('media/Tops/Romantic/g3.jpg');
   console.log("image",image)
   // Once the image is loaded, we can update the output
   // settings to match it
@@ -30,7 +30,7 @@ canvasSketch(async ({ update }) => {
     context.shadowOffsetY = 6;
     context.shadowColor = "grey"
     context.shadowBlur = 20;
-    context.drawImage(image, 150, 135, width*0.7, height*0.67);
+    context.drawImage(image, 180, 120, width*0.65, height*0.65);
     context.restore()
 
     // Extract bitmap pixel data
@@ -53,16 +53,16 @@ canvasSketch(async ({ update }) => {
 
     //Title cosmetics and center
 
-    const title = "City";
+    const title = "Smoky Dreams";
     context.fillStyle = '#212021';
-    context.font = "70px futura";
+    context.font = "60px futura";
     const titleCenter = centerX(title);
-    context.fillText(title, titleCenter, 910);
+    context.fillText(title, titleCenter, 890);
 
     context.font = "italic 30px futura";
-    const subtitle = "by Artificial Intelligence"
+    const subtitle = " Serie 'City' created by Artificial Intelligence"
     const subtitleCenter = centerX(subtitle)
-    context.fillText(subtitle, subtitleCenter, 960)
+    context.fillText(subtitle, subtitleCenter, 940)
 
     //Title serie name + font
     const serie = "ⓒHumAIn_Art" //"Variations of π (pi)"
