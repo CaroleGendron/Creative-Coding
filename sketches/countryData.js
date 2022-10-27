@@ -117,7 +117,7 @@ const h = height * 0.5; //
 //scaling
 const scaleHappy=math.mapRange(Happy, 1,10, 10, 1000) //blur
 const scalePop=math.mapRange(Population, 1,10, 1, 2000) // = line density
-const scaleLand=math.mapRange(Land, 1,10, 0.010, 1) // = from round to cahos
+const scaleLand=math.mapRange(Land, 1,10, 0.010, 0.5) // = from round to cahos
 console.log("scaleHappy", scaleHappy)
 console.log("scalePop", scalePop)
 
