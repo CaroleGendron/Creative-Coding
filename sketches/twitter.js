@@ -6,9 +6,9 @@ const load = require('load-asset');
 // We create an 'async' sketch
 canvasSketch(async ({ update }) => {
   // Await the image loader, it returns the loaded <img>
-  const image = await load('media/Tops/Night Fire/z2.jpg');
+  const image = await load('media/Tops/SciFi/i16.jpg');
   console.log("image",image)
-  // Once the image is loaded, we can update the output
+  // Once the image is loaded, we can uPdate the output
   // settings to match it
   update({
     dimensions: [ image.width, image.height ]
@@ -53,7 +53,7 @@ canvasSketch(async ({ update }) => {
 
     //Title cosmetics and center
 
-    const title = "Night Fire";
+    const title = "Sci-Fi";
     context.fillStyle = '#212021';
     context.font = "60px futura";
     const titleCenter = centerX(title);
