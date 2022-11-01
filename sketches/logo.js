@@ -1,5 +1,14 @@
 //The Wizard Bear CC-BY-SA 2019 https://www.openprocessing.org/sketch/713379
 
+const canvasSketch = require('canvas-sketch');
+
+const settings = {
+  dimensions: [ 1080, 1080 ],
+};
+
+const sketch = () => {
+  return ({ context, width, height }) => {
+
 var string = "data-feelings.com"; //words to be displayed intially
 const size = 55; //font size
 const fontFile = "Muli-Black.ttf";
@@ -28,12 +37,11 @@ var font;
 var points = [];
 var startingPoints;
 
-function preload() {
+const preload = () => {
 	font = loadFont(fontFile);
-
 }
 
-function setup() {
+const setup = () => {
 	createCanvas(500, 500); //createCanvas(windowWidth, windowHeight);
 	textFont(font);
 	fill(200,200,200, textAlpha);//fill(200,200,200, textAlpha);
@@ -46,7 +54,7 @@ function setup() {
 	start();
 }
 
-function start(){
+const start = () =>{
 
 	textSize(size);
 
@@ -63,7 +71,7 @@ function start(){
 
 }
 
-function draw() {
+const draw = () => {
 	if(showText){
 		noStroke();//stroke(100,100,100);
 		text(string, width /2  - textWidth(string)/2 , height/2 );//text(string, width / 2 - textWidth(string) / 2, height / 2);
@@ -83,13 +91,18 @@ function draw() {
 
 }
 
-function keyPressed() {
+const keyPressed = () => {
 	if (key == 's') {
 		save();
 	}else if(keyCode === RETURN){
 		seed = floor(random(1000000));
 		start();
 
-	}
+	};
+};
+
+}
 }
 
+draw();
+keyPressed();
