@@ -6,7 +6,7 @@ const load = require('load-asset');
 // We create an 'async' sketch
 canvasSketch(async ({ update }) => {
   // Await the image loader, it returns the loaded <img>
-  const image = await load('media/Tops/SciFi/i16.jpg');
+  const image = await load('media/twiiter/SCIFY3.jpg');
   console.log("image",image)
   // Once the image is loaded, we can uPdate the output
   // settings to match it
