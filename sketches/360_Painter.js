@@ -9,15 +9,15 @@ const settings = {
 };
 
 //Setting Title Name
-const country_name = "Italy"
+const country_name = "Germany"
 
 //Default values Tweakpane
 const params= {
-  Population: 10, //'community' //density lines
-  Land: 8, //'people look the same/int'//width
-  Age: 10, //greyscale color
-  Happy: 5, //neat-blur
-  CO2: 4 //blue
+  Population: 9, //'community' //density lines
+  Land: 10, //'people look the same/int'//width
+  Age: 7, //greyscale color
+  Happy: 6, //neat-blur
+  CO2: 3 //blue
 }
 
 //Variable setting random starting point the canvas
@@ -147,8 +147,8 @@ for (let i =0; i <scalePop; i++){
   };
 
   //Title cosmetics and center
-  // const title = `${country_name}`;
-  const title = "Autoportrait";
+  const title = `${country_name}`;
+  // const title = "Autoportrait";
   context.fillStyle = '#313131';
   context.font = "70px futura";
   const titleCenter = centerX(title);
@@ -171,7 +171,7 @@ const createPane = () => {
   const pane = new Tweakpane.Pane(); //create a new slider pane
   let folder;
 
-  folder = pane.addFolder({ title : "Indicators"});
+  folder = pane.addFolder({ title : "Scale: from 1 (Little) to 10 (Big)"});
   folder.addInput(params, 'Population', { min: 1, max: 10 });
   folder.addInput(params, 'Land', { min: 1, max: 10 });
   folder.addInput(params, 'Age', { min: 1, max: 10 });
