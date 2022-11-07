@@ -9,16 +9,17 @@ const settings = {
 };
 
 //Setting Title Name
-const country_name = "Russia"
+const country_name = "Europe"
 
 //Default values Tweakpane
 const params= {
-  Population: 9, //'community' //density lines
-  Land: 10, //'people look the same/int'//width
-  Age: 7, //greyscale color
-  Happy: 6, //neat-blur
-  CO2: 3, //blue
+  Population: 0, //'community' //density lines
+  Land: 0, //'people look the same/int'//width
+  Age: 0, //greyscale color
+  Happiness: 0, //neat-blur
+  CO2: 0, //blue
   Color: '#ff5c00',
+  title: '?',
 }
 
 //Variable setting random starting point the canvas
@@ -32,22 +33,23 @@ const sketch = () => {
     const Population = params.Population;
     const Land = params.Land;
     const Age = params.Age;
-    const Happy = params.Happy;
+    const Happiness = params.Happiness;
     const CO2 = params.CO2;
     const Color = params.Color;
+    const title = params.title;
 
-    const India= {'Pop': 1400,'Land': 3,'Age': 28.7,'Happy': 3.8,'CO2': 1.8}
-    const Black_Africa= {'Pop': 1100,'Land': 22,'Age': 20.4,'Happy': 4.6,'CO2': 0.9}
-    const Arab_World= {'Pop': 1100,'Land': 19,'Age': 28.3,'Happy': 5.2,'CO2': 6.6}
-    const Asia= {'Pop': 900,'Land': 7,'Age': 31.4,'Happy': 5.5,'CO2': 4.6}
-    const Russia= {'Pop': 150,'Land': 16,'Age': 40.3,'Happy': 5.5,'CO2': 11.8}
-    const China= {'Pop': 1400,'Land': 9,'Age': 42,'Happy': 5.6,'CO2': 7.6}
-    const Latin_America= {'Pop': 700,'Land': 29,'Age': 32.2,'Happy': 6.1,'CO2': 3.3}
-    const European_Union= {'Pop': 500,'Land': 4,'Age': 43,'Happy': 6.6,'CO2': 6.2}
-    const USA= {'Pop': 350,'Land': 9,'Age': 38.5,'Happy': 7,'CO2': 14.7}
+    const India= {'Pop': 1400,'Land': 3,'Age': 28.7,'Happiness': 3.8,'CO2': 1.8}
+    const Black_Africa= {'Pop': 1100,'Land': 22,'Age': 20.4,'Happiness': 4.6,'CO2': 0.9}
+    const Arab_World= {'Pop': 1100,'Land': 19,'Age': 28.3,'Happiness': 5.2,'CO2': 6.6}
+    const Asia= {'Pop': 900,'Land': 7,'Age': 31.4,'Happiness': 5.5,'CO2': 4.6}
+    const Russia= {'Pop': 150,'Land': 16,'Age': 40.3,'Happiness': 5.5,'CO2': 11.8}
+    const China= {'Pop': 1400,'Land': 9,'Age': 42,'Happiness': 5.6,'CO2': 7.6}
+    const Latin_America= {'Pop': 700,'Land': 29,'Age': 32.2,'Happiness': 6.1,'CO2': 3.3}
+    const European_Union= {'Pop': 500,'Land': 4,'Age': 43,'Happiness': 6.6,'CO2': 6.2}
+    const USA= {'Pop': 350,'Land': 9,'Age': 38.5,'Happiness': 7,'CO2': 14.7}
 
 // creation indicator list to be able to loop
-const indicator_list = ["Happy","Land", "Age", "Population",  "CO2"];
+const indicator_list = ["Happiness","Land", "Age", "Population",  "CO2"];
 const indicator =  indicator_list[Math.floor(Math.random()*indicator_list.length)];//params.indic
 console.log("indicator", indicator)
 
@@ -57,9 +59,9 @@ const degToRad = (degrees) => {
 
 let newIndic;
 
-if (indicator== "Happy"){
-  console.log("indic Happy* : ", Happy)
-  newIndic = Happy ;
+if (indicator== "Happiness"){
+  console.log("indic Happy* : ", Happiness)
+  newIndic = Happiness ;
 }
 else if  (indicator== "Land"){
   console.log("indic Land*: ", Land)
@@ -87,7 +89,7 @@ else if  (indicator== "Color"){
 //scaling
 const scaleAge=math.mapRange(Age, 20.4,43, 1, 150)
 const scalePop=math.mapRange(Population, 150,1400, 1, 600)
-const happyInverse =math.mapRange(Happy, 3.8,7, 7, 3.8)
+const happyInverse =math.mapRange(Happiness, 3.8,7, 7, 3.8)
 const scaleHappy=math.mapRange(happyInverse, 3.8,7, 0.10, 0.9)
 const scaleCO2=math.mapRange(CO2, 0.9,14.7,  0.0003, 0.005)
 const scaleLand=math.mapRange(Land, 3,29,  0.1, 0.6)
@@ -137,12 +139,13 @@ for (let i =0; i <scalePop; i++){
   };
 
   //Title cosmetics and center
-  const title = `${country_name}`;
+  // const title = `${country_name}`;
+  const input = `Europe : ${title}`;
   // const title = "Autoportrait";
   context.fillStyle = '#313131';
   context.font = "70px futura";
-  const titleCenter = centerX(title);
-  context.fillText(title, titleCenter, 1000);
+  const titleCenter = centerX(input);
+  context.fillText(input, titleCenter, 1000);
   context.restore()
 
 
@@ -161,13 +164,15 @@ const createPane = () => {
   const pane = new Tweakpane.Pane(); //create a new slider pane
   let folder;
 
-  folder = pane.addFolder({ title : "Scale: from 1 (Little) to 10 (Big)"});
+  folder = pane.addFolder({ title : "Profile Europe moving cursors"});
+  folder.addInput(params, 'CO2', { min: 0, max: 15 });
   folder.addInput(params, 'Population', { min: 150, max: 1400 });
   folder.addInput(params, 'Land', { min: 3, max: 29 });
   folder.addInput(params, 'Age', { min: 20.4, max: 43 });
-  folder.addInput(params, 'Happy', { min: 3.8, max: 7 });
-  folder.addInput(params, 'CO2', { min: 0, max: 15 });
-  pane.addInput(params, 'Color');
+  folder.addInput(params, 'Happiness', { min: 3.8, max: 7 });
+
+  folder.addInput(params, 'Color');
+  folder.addInput(params, 'title');
 };
 
 createPane();
