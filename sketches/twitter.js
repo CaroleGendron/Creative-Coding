@@ -6,7 +6,7 @@ const load = require('load-asset');
 // We create an 'async' sketch
 canvasSketch(async ({ update }) => {
   // Await the image loader, it returns the loaded <img>
-  const image = await load('media/twiiter/SCIFY3.jpg');
+  const image = await load('media/romance.jpg');
   console.log("image",image)
   // Once the image is loaded, we can uPdate the output
   // settings to match it
@@ -53,7 +53,7 @@ canvasSketch(async ({ update }) => {
 
     //Title cosmetics and center
 
-    const title = "Sci-Fi";
+    const title = "Romance";
     context.fillStyle = '#212021';
     context.font = "60px futura";
     const titleCenter = centerX(title);

@@ -114,7 +114,7 @@ class Agent {
     context.fillStyle = 'grey';
     context.font = "30px futura";
     // context.fillText("Making Data more Human",560, 750)
-    context.fillText("ⓒHumAIn_Art",600, 770)
+    // context.fillText("ⓒHumAIn_Art",600, 770)
 
   }
 
