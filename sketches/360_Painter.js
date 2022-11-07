@@ -17,7 +17,8 @@ const params= {
   Land: 10, //'people look the same/int'//width
   Age: 7, //greyscale color
   Happy: 6, //neat-blur
-  CO2: 3 //blue
+  CO2: 3 ,//blue
+
 }
 
 //Variable setting random starting point the canvas
