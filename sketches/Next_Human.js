@@ -21,30 +21,30 @@ const sketch = () => {
   };
 
     //Title cosmetics and center
-    context.font = "100px futura";
-    const title1 = "The Next Human";
+    context.font = "70px futura";
+    const title1 = "Humanity is pivoting to Africa";
     context.fillStyle = '#212021';
     const titleCenter1 = centerX(title1);
-    context.fillText(title1, titleCenter1, 860);
+    context.fillText(title1, titleCenter1, 880);
 
 
-    context.font = "60px futura";
-    const title2 = "1950 - 2100";
+    context.font = "45px futura";
+    const title2 = "1 person out of 3 will be African in 2100";
     context.fillStyle = '#212021';
     const titleCenter2 = centerX(title2);
-    context.fillText(title2, titleCenter2, 930);
+    context.fillText(title2, titleCenter2, 950);
 
     context.font = "italic 30px futura";
-    const subtitle = " created with Artificial Intelligence"
-    const subtitleCenter = centerX(subtitle)
-    context.fillText(subtitle, subtitleCenter, 980)
+    // const subtitle = "created with Data from United Nations"
+    // const subtitleCenter = centerX(subtitle)
+    // context.fillText(subtitle, subtitleCenter, 990)
 
     //Title serie name + font
     const serie = "ⓒHumAIn_Art" //"Variations of π (pi)"
     context.fillStyle = 'grey';
     context.font = "20px futura";
     const serieCenter = centerX(serie)
-    context.fillText(serie, serieCenter, 1030)
+    context.fillText(serie, serieCenter, 1020)
   };
 };
 
