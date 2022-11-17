@@ -428,34 +428,34 @@ createPane();
 //     const CO2 = params.CO2;
 
     //create country dictionnary - 27 countries - , 5 indics
-    // const Europe ={'Happy': 5 ,'Land': 5 ,'Age': 5 ,'Population': 5 ,'Urban': 5 }
-    // const Austria= {'Happy' :  9, 'Land' :  6, 'Age' :  9, 'Population' :  6, 'Urban' :  5, 'CO2' :  5}
-    // const Belgium= {'Happy' :  7, 'Land' :  2, 'Age' :  6, 'Population' :  8, 'Urban' :  10, 'CO2' :  5}
-    // const Bulgaria= {'Happy' :  0, 'Land' :  7, 'Age' :  10, 'Population' :  5, 'Urban' :  8, 'CO2' :  5}
-    // const Cyprus= {'Happy' :  3, 'Land' :  1, 'Age' :  0, 'Population' :  1, 'Urban' :  1, 'CO2' :  5}
-    // const Czechia= {'Happy' :  7, 'Land' :  5, 'Age' :  3, 'Population' :  7, 'Urban' :  6, 'CO2' :  5}
-    // const Germany= {'Happy' :  8, 'Land' :  9, 'Age' :  10, 'Population' :  10, 'Urban' :  9, 'CO2' :  5}
-    // const Denmark= {'Happy' :  10, 'Land' :  3, 'Age' :  6, 'Population' :  5, 'Urban' :  2, 'CO2' :  5}
-    // const Spain= {'Happy' :  6, 'Land' :  10, 'Age' :  6, 'Population' :  9, 'Urban' :  9, 'CO2' :  5}
-    // const Estonia= {'Happy' :  2, 'Land' :  3, 'Age' :  5, 'Population' :  2, 'Urban' :  7, 'CO2' :  5}
-    // const Finland= {'Happy' :  10, 'Land' :  9, 'Age' :  8, 'Population' :  4, 'Urban' :  7, 'CO2' :  5}
-    // const France= {'Happy' :  6, 'Land' :  10, 'Age' :  4, 'Population' :  10, 'Urban' :  9, 'CO2' :  5}
-    // const Greece= {'Happy' :  1, 'Land' :  7, 'Age' :  9, 'Population' :  7, 'Urban' :  8, 'CO2' :  5}
-    // const Croatia= {'Happy' :  1, 'Land' :  6, 'Age' :  9, 'Population' :  3, 'Urban' :  2, 'CO2' :  5}
-    // const Hungary= {'Happy' :  2, 'Land' :  7, 'Age' :  4, 'Population' :  6, 'Urban' :  7, 'CO2' :  5}
-    // const Ireland= {'Happy' :  8, 'Land' :  5, 'Age' :  1, 'Population' :  4, 'Urban' :  4, 'CO2' :  5}
-    // const Italy= {'Happy' :  6, 'Land' :  8, 'Age' :  10, 'Population' :  10, 'Urban' :  10, 'CO2' :  5}
-    // const Lithuania= {'Happy' :  4, 'Land' :  4, 'Age' :  3, 'Population' :  3, 'Urban' :  5, 'CO2' :  5}
-    // const Luxembourg= {'Happy' :  9, 'Land' :  1, 'Age' :  2, 'Population' :  1, 'Urban' :  0, 'CO2' :  5}
-    // const Latvia= {'Happy' :  3, 'Land' :  4, 'Age' :  7, 'Population' :  2, 'Urban' :  6, 'CO2' :  5}
-    // const Malta= {'Happy' :  7, 'Land' :  0, 'Age' :  4, 'Population' :  0, 'Urban' :  10, 'CO2' :  5}
-    // const Netherlands= {'Happy' :  10, 'Land' :  2, 'Age' :  7, 'Population' :  8, 'Urban' :  6, 'CO2' :  5}
-    // const Poland= {'Happy' :  5, 'Land' :  9, 'Age' :  2, 'Population' :  9, 'Urban' :  4, 'CO2' :  5}
-    // const Portugal= {'Happy' :  2, 'Land' :  6, 'Age' :  7, 'Population' :  6, 'Urban' :  4, 'CO2' :  5}
-    // const Romania= {'Happy' :  4, 'Land' :  8, 'Age' :  3, 'Population' :  9, 'Urban' :  3, 'CO2' :  5}
-    // const Slovakia= {'Happy' :  5, 'Land' :  4, 'Age' :  1, 'Population' :  4, 'Urban' :  2, 'CO2' :  5}
-    // const Slovenia= {'Happy' :  4, 'Land' :  2, 'Age' :  8, 'Population' :  2, 'Urban' :  3, 'CO2' :  5}
-    // const Sweden= {'Happy' :  9, 'Land' :  10, 'Age' :  5, 'Population' :  7, 'Urban' :  1, 'CO2' :  5}
+    const Europe ={'Happy': 5 ,'Land': 5 ,'Age': 5 ,'Population': 5 ,'Urban': 5 }
+    const Austria= {'Happy' :  9, 'Land' :  6, 'Age' :  9, 'Population' :  6, 'Urban' :  5, 'CO2' :  5}
+    const Belgium= {'Happy' :  7, 'Land' :  2, 'Age' :  6, 'Population' :  8, 'Urban' :  10, 'CO2' :  5}
+    const Bulgaria= {'Happy' :  0, 'Land' :  7, 'Age' :  10, 'Population' :  5, 'Urban' :  8, 'CO2' :  5}
+    const Cyprus= {'Happy' :  3, 'Land' :  1, 'Age' :  0, 'Population' :  1, 'Urban' :  1, 'CO2' :  5}
+    const Czechia= {'Happy' :  7, 'Land' :  5, 'Age' :  3, 'Population' :  7, 'Urban' :  6, 'CO2' :  5}
+    const Germany= {'Happy' :  8, 'Land' :  9, 'Age' :  10, 'Population' :  10, 'Urban' :  9, 'CO2' :  5}
+    const Denmark= {'Happy' :  10, 'Land' :  3, 'Age' :  6, 'Population' :  5, 'Urban' :  2, 'CO2' :  5}
+    const Spain= {'Happy' :  6, 'Land' :  10, 'Age' :  6, 'Population' :  9, 'Urban' :  9, 'CO2' :  5}
+    const Estonia= {'Happy' :  2, 'Land' :  3, 'Age' :  5, 'Population' :  2, 'Urban' :  7, 'CO2' :  5}
+    const Finland= {'Happy' :  10, 'Land' :  9, 'Age' :  8, 'Population' :  4, 'Urban' :  7, 'CO2' :  5}
+    const France= {'Happy' :  6, 'Land' :  10, 'Age' :  4, 'Population' :  10, 'Urban' :  9, 'CO2' :  5}
+    const Greece= {'Happy' :  1, 'Land' :  7, 'Age' :  9, 'Population' :  7, 'Urban' :  8, 'CO2' :  5}
+    const Croatia= {'Happy' :  1, 'Land' :  6, 'Age' :  9, 'Population' :  3, 'Urban' :  2, 'CO2' :  5}
+    const Hungary= {'Happy' :  2, 'Land' :  7, 'Age' :  4, 'Population' :  6, 'Urban' :  7, 'CO2' :  5}
+    const Ireland= {'Happy' :  8, 'Land' :  5, 'Age' :  1, 'Population' :  4, 'Urban' :  4, 'CO2' :  5}
+    const Italy= {'Happy' :  6, 'Land' :  8, 'Age' :  10, 'Population' :  10, 'Urban' :  10, 'CO2' :  5}
+    const Lithuania= {'Happy' :  4, 'Land' :  4, 'Age' :  3, 'Population' :  3, 'Urban' :  5, 'CO2' :  5}
+    const Luxembourg= {'Happy' :  9, 'Land' :  1, 'Age' :  2, 'Population' :  1, 'Urban' :  0, 'CO2' :  5}
+    const Latvia= {'Happy' :  3, 'Land' :  4, 'Age' :  7, 'Population' :  2, 'Urban' :  6, 'CO2' :  5}
+    const Malta= {'Happy' :  7, 'Land' :  0, 'Age' :  4, 'Population' :  0, 'Urban' :  10, 'CO2' :  5}
+    const Netherlands= {'Happy' :  10, 'Land' :  2, 'Age' :  7, 'Population' :  8, 'Urban' :  6, 'CO2' :  5}
+    const Poland= {'Happy' :  5, 'Land' :  9, 'Age' :  2, 'Population' :  9, 'Urban' :  4, 'CO2' :  5}
+    const Portugal= {'Happy' :  2, 'Land' :  6, 'Age' :  7, 'Population' :  6, 'Urban' :  4, 'CO2' :  5}
+    const Romania= {'Happy' :  4, 'Land' :  8, 'Age' :  3, 'Population' :  9, 'Urban' :  3, 'CO2' :  5}
+    const Slovakia= {'Happy' :  5, 'Land' :  4, 'Age' :  1, 'Population' :  4, 'Urban' :  2, 'CO2' :  5}
+    const Slovenia= {'Happy' :  4, 'Land' :  2, 'Age' :  8, 'Population' :  2, 'Urban' :  3, 'CO2' :  5}
+    const Sweden= {'Happy' :  9, 'Land' :  10, 'Age' :  5, 'Population' :  7, 'Urban' :  1, 'CO2' :  5}
 
 
 // // creation indicator list to be able to loop
