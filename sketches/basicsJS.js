@@ -107,16 +107,16 @@ const loadImage = async (url) => {
   })
 
 }
-//then call the function
-const myImage = loadImage("https://picsum.photos/200");
-console.log(myImage.width) //output = 0
-const loadImage = (url) => {
-  const img = new Image();
-  img.src = url;
-  return img;
-}
-//then call the function
-const myImage = loadImage("https://picsum.photos/200");
-console.log(myImage.width) //output = 0
+// //then call the function
+// const myImage = loadImage("https://picsum.photos/200");
+// console.log(myImage.width) //output = 0
+// const loadImage = (url) => {
+//   const img = new Image();
+//   img.src = url;
+//   return img;
+// }
+// //then call the function
+// const myImage = loadImage("https://picsum.photos/200");
+// console.log(myImage.width) //output = 0
 
 //https://www.domestika.org/en/courses/3862-creative-coding-2-0-in-js-animation-sound-color/units/14950-the-setup
