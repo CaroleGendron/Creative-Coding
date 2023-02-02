@@ -22,7 +22,7 @@ const params = {
 
 const sketch = () => {
 	return ({ context, width, height, frame }) => {
-		context.fillStyle = 'white';
+		context.fillStyle = '#F6F3E1';
 		context.fillRect(0, 0, width, height);
 
 		const cols = params.cols;

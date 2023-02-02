@@ -10,6 +10,7 @@ const settings = {
 };
 
 
+
 const sketch = ({width, height}) => {
 
   //ORIGINAL RANDOM / THEN agents array / Then arrays of array
