@@ -6,9 +6,8 @@ const settings = {
 
 dimensions: [  1080, 1080],
 // animate : true, starts a requestAnimationFrame loop once your sketch is loaded.
-// animate : true,
-// //Set loop duration to 3
-// duration: 3,
+// animate : true, normally 60 frames per seconds
+// duration: 3,  loop duration
 // // // Optionally specify a frame rate, defaults to 30
 // fps: 1,
 // //throttle to slow down animation
