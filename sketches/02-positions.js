@@ -5,13 +5,14 @@ const math = require('canvas-sketch-util/math');
 const settings = {
   dimensions: [ 1048, 1048 ],
   //Insta : 1080/1080 pixels wide. Portrait 1080 x 1350 pixels / landscape 1080 x 566 .
-  //  GIF file size [ 256, 256 ]
+  //GIF file size [ 256, 256 ]
   //print = minimum of 3300 by 2550 pixels
   //poster size = 6000 pixels on the long side
   //Phone wallpapers: 1920x1080
   //Personal Website recommended 1920 x1080 pixels
   //Twitter post image size: 1024 x 512 pixels
   //Facebook image post: 1200 x 630 pixels
+  //"A4" or "Letter"
 
   exportPixelRatio: 2,  // Export at a higher resolution than what we see in the browser
 };
