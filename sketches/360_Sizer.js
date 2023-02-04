@@ -2,7 +2,7 @@
 
 const canvasSketch = require('canvas-sketch');
 const random = require('canvas-sketch-util/random');
-const math = require('canvas-sketch-util/math');
+const math = require('canvas-sketch-util/math'); //to map values
 const Tweakpane = require('tweakpane');
 
 const settings = {
@@ -10,13 +10,22 @@ const settings = {
 	animate: true
 };
 
+// //mapping score and bar length
+// const co2 = math.mapRange(score, 1, 10, -200, -400) // map range (const to map, origin base, origin top, new base, new top)
+// console.log("mapScore : ", rangeScore)
+
+const item_name = "Corn";
+const co2_value = 22.87;
+const water_value = 0.2;
+const land_value = 4.77;
+
 const params = {
-	cols: 10,
-	rows: 10,
-	scaleMin: 1,
-	scaleMax: 30,
+	cols: land_value,
+	rows: land_value,
+	scaleMin: co2_value,
+	scaleMax: co2_value,
 	freq: 0.001,
-	amp: 0.2,
+	amp: water_value,
 };
 
 const sketch = () => {
@@ -75,19 +84,19 @@ const sketch = () => {
 			context.restore();
 		}
  //center the title
- const len_text = context.measureText("Avocado").width;
+ context.font = "120px futura";
+ const len_text = context.measureText(item_name).width;
  console.log("len_text:", len_text)
- const x_center = width/2.5 - (len_text /2);
+ const x_center = width/2 - (len_text/2);
  console.log("x_center:", x_center)
- context.fillStyle = "#2D3F3C";
- context.font = "60px futura";
- context.fillText("Avocado", x_center, 1000);
+ context.fillStyle = "#3E3F44";
+ context.fillText(item_name, x_center, 1020);
 
- const len_text2 = context.measureText("by data-feelings.com").width;
- const x_center2 = width/2 - (len_text2 /5);
- context.font = "30px futura";
- context.fillText("by data-feelings.com", x_center2, 1050);
- context.shadowBlur = 60;
+//  const len_text2 = context.measureText("by data-feelings.com").width;
+//  const x_center2 = width/2 - (len_text2 /5);
+//  context.font = "30px futura";
+//  context.fillText("by data-feelings.com", x_center2, 1050);
+//  context.shadowBlur = 60;
 	};
 };
 
@@ -96,15 +105,16 @@ const createPane = () => {
 	let folder;
 
 	folder = pane.addFolder({ title: 'Grid '});
-	folder.addInput(params, 'cols', { min: 2, max: 50, step: 1 });
-	folder.addInput(params, 'rows', { min: 2, max: 50, step: 1 });
-	folder.addInput(params, 'scaleMin', { min: 1, max: 100 });
-	folder.addInput(params, 'scaleMax', { min: 1, max: 100 });
-
-	folder = pane.addFolder({ title: 'Noise' });
+	folder.addInput(params, 'cols', { min: 1, max: 15, step: 1 });
+	folder.addInput(params, 'rows', { min: 1, max: 15, step: 1 });
+	folder.addInput(params, 'scaleMin', { min: 0, max: 100 });
+	folder.addInput(params, 'scaleMax', { min: 0, max: 100 });
 	folder.addInput(params, 'freq', { min: -0.01, max: 0.01 });
 	folder.addInput(params, 'amp', { min: 0, max: 1 });
 };
 
 createPane();
 canvasSketch(sketch, settings);
+
+// # Save animations to GIF but scale it down to 512 px wide
+// canvas-sketch sketches/animation.js --output=tmp --stream [ gif --scale=512:-1 ]
