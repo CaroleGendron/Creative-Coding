@@ -1,3 +1,5 @@
+//audio documentation : https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API
+//more doc :https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API
 //https://www.domestika.org/en/courses/3862-creative-coding-2-0-in-js-animation-sound-color/units/14953-the-audio
 const canvasSketch = require('canvas-sketch');
 
@@ -18,6 +20,7 @@ const sketch = () => {
     if(!audioContext) return; //to fix bug being able to launch audio to calculate its frequency lenght console.log
 
     analyserNode.getFloatFrequencyData(audioData);
+
 
     const avg = getAverage(audioData) //store the average data to be used to draw circle
 
@@ -92,7 +95,7 @@ start(); //call start to start the animation
 
 
 //---------------------
-//ADD AUDIO TO BROWER + CLICK TO PLAY/PAUSE
+// ADD AUDIO TO BROWER + CLICK TO PLAY/PAUSE
 
 // const canvasSketch = require('canvas-sketch');
 
