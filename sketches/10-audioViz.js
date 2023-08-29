@@ -57,7 +57,7 @@ const addListeners = () => { //per default the audio player is off. cond. statem
 
 const createAudio =() => {
   audio = document.createElement('audio') ;//create & store a variable called audio / no need to be added to the document body
-  audio.src = "audio/Keys.mp3"//giving the audio a source, needs to be in the same folder than the sketch
+  audio.src = "media/Keys.mp3"//giving the audio a source, needs to be in the same folder than the sketch
 
   audioContext = new AudioContext();
 
